@@ -5,28 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Projects</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #fff; text-align: center; padding: 50px; }
-    h1 { margin-bottom: 40px; }
-    .projects { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-    .project { background: #222; padding: 20px; border-radius: 10px; width: 200px; cursor: pointer; transition: transform 0.2s; }
-    .project:hover { transform: scale(1.05); }
-    a { text-decoration: none; color: #00f; }
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      font-size: 3rem;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .project {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 191, 255, 0.4);
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .project h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #00bfff;
+      text-shadow: 0 0 5px #00bfff;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00bfff;
+      color: #0f0f0f;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .project a:hover {
+      background: #0090cc;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media(max-width: 800px){
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Mini Projects</h1>
   <div class="projects">
     <div class="project">
+      <img src="guess.jpeg" alt="Guess My Number">
       <h2>Guess My Number</h2>
       <a href="./GuessMyNumber/index.html" target="_blank">Play</a>
     </div>
     <div class="project">
+      <img src="dice.png" alt="Pig Game">
       <h2>Pig Game</h2>
-      <a href="./PigGame/index.html" target="_blank">Play</a>
+      <a href="./Pig-game/index.html" target="_blank">Play</a>
     </div>
     <div class="project">
+      <img src="rps.jpeg" alt="Rock Paper Scissors">
       <h2>Rock Paper Scissors</h2>
-      <a href="./RockPaperScissors/index.html" target="_blank">Play</a>
+      <a href="./Rock-Paper-Scissors/rps.html" target="_blank">Play</a>
     </div>
   </div>
 </body>
